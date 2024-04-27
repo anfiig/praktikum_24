@@ -1,0 +1,19 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'header.scss';
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    font-family: 'Rubik', 'Arial', 'Calibri',  sans-serif;
+    background: $bgr-gradient;
+}
+
+*::selection{
+    background: $pink-50;
+}

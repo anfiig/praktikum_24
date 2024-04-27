@@ -1,0 +1,13 @@
+$bgr-color: rgba(52, 48, 68, 1);
+$bgr-gradient: linear-gradient(45deg, rgba(52, 48, 68, 1) 0%, rgba(17, 38, 63, 1) 100%);
+
+$main-pink: rgba(219, 195, 249, 1);
+$main-green: rgba(64, 119, 136, 1);
+$main-white: rgba(255, 255, 255, 1);
+
+$pink-50: rgba($main-pink, 0.5);
+$green-50: rgba($main-green, 0.5);
+$green-20: rgba($main-green, 0.2);
+$green-10: rgba($main-green, 0.1);
+
+$transition-time: 0.4s;

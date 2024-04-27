@@ -5,20 +5,24 @@ import gulpSass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
+import {deleteSync} from 'del';;
 
 const sass = gulpSass(sassCompiler);
 
-gulp.task('server', function() {
+function clean() {
+  return deleteSync(['dist/**/*']);
+}
 
-    browserSync({
+gulp.task('server', function() {
+    browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
 });
 
 gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
+    return gulp.src("src/sass/**/style.+(scss|sass)")
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
@@ -27,9 +31,16 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-    /// gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
-    gulp.watch("src/*").on('change', browserSync.reload);
-})
+gulp.task('transfer', function() {
+    clean();
+    return gulp.src(['src/**/*', '!src/sass/', '!src/sass/**/*'])
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream());
+});
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+gulp.task('watch', function() {
+    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+    gulp.watch("src/**/*", gulp.parallel('transfer'));
+});
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'transfer'));
