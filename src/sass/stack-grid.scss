@@ -1,0 +1,46 @@
+.stack-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    &__el{
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 150px;
+        height: 150px;
+        background: $green-10;
+        border: 3px solid $main-green;
+        border-radius: 5px;
+    }
+
+    &__title{
+        font-size: $table-text-size;
+        color: $main-white;
+    }
+
+    &__icon{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    &__el:hover{
+        transition: background $transition-time;
+        background: $green-20;
+    }
+
+    &__el:hover &__icon{
+        transition: opacity $transition-time;
+        opacity: 1;
+    }
+
+    &__link{
+        color: $main-white;
+    }
+}

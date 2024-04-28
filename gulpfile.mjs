@@ -5,13 +5,14 @@ import gulpSass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
-import {deleteSync} from 'del';;
+// import {deleteSync} from 'del';;
+// import image from 'gulp-image';
 
 const sass = gulpSass(sassCompiler);
 
-function clean() {
-  return deleteSync(['dist/**/*']);
-}
+// function clean() {
+//   return deleteSync(['dist/**/*']);
+// }
 
 gulp.task('server', function() {
     browserSync.init({
@@ -31,9 +32,16 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
+// function imageCopy() {
+//     return gulp.src('src/img/*')
+//       .pipe(image())
+//       .pipe(gulp.dest('dist/img'));
+//   }
+
 gulp.task('transfer', function() {
-    clean();
-    return gulp.src(['src/**/*', '!src/sass/', '!src/sass/**/*'])
+    // clean();
+    // imageCopy();
+    return gulp.src(['src/**/*', '!src/sass/', '!src/sass/**/*', '!src/img/**/*'])
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 });

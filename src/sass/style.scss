@@ -1,6 +1,9 @@
 @import 'reset.scss';
 @import 'variables.scss';
 @import 'header.scss';
+@import 'section.scss';
+@import 'about-me.scss';
+@import 'stack-grid.scss';
 
 @font-face {
     font-family: 'Rubik';
@@ -10,10 +13,17 @@
   }
 
 body {
-    font-family: 'Rubik', 'Arial', 'Calibri',  sans-serif;
     background: $bgr-gradient;
+    font-family: 'Rubik', 'Arial', 'Calibri',  sans-serif;
 }
 
 *::selection{
     background: $pink-50;
+}
+
+.unselectable{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

@@ -1,0 +1,35 @@
+.about-me{
+    &__title{
+        // margin: 0 0 150px 0;
+    }
+
+    &__info{
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    &__text{
+        color: $white-85;
+        font-size: $text-size;
+        line-height: 1.25;
+        text-align: justify;
+        letter-spacing: 1px;
+    }
+
+    &__img{
+        width: 350px;
+        margin: 50px 0;
+    }
+
+    &__fixed-me{
+        position: absolute;
+        top: calc(-1 * $title-size);
+        left: calc(-1 * (((100% - $section-width) / 4) + $title-size * 2));
+
+        font-size: 64px;
+        color: $main-pink;
+    }
+}
