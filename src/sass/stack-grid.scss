@@ -36,7 +36,7 @@
     }
 
     &__el:hover &__icon{
-        transition: opacity $transition-time;
+        transition: opacity $transition-slow-time;
         opacity: 1;
     }
 

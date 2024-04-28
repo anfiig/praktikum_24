@@ -1,0 +1,78 @@
+.works{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 0 60px 0;
+    }
+
+    &__link{
+        color: $main-white;
+        font-size: $text-size;
+        letter-spacing: 2px;
+        text-decoration: none;
+    }
+
+    &__el{
+        position: relative;
+        opacity: 0.4;
+        transition: opacity $transition-time;
+        width: 100%;
+    }
+
+    &__el:hover{
+        transition: opacity $transition-time;
+        opacity: 1;
+    }
+
+    &__el:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -40px;
+
+        width: $text-size;
+        height: $text-size;
+    }
+
+    &__el_maket::before{
+        background: url('../icons/icon-list-element-pink.svg') center;
+    }
+
+    &__el_mine::before{
+        background: url('../icons/icon-list-element-green.svg') center;
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 15px;
+    }
+
+    &__abbr{
+        position: relative;
+
+        font-size: $text-size;
+        color: $main-white;
+    }
+
+    &__abbr::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -30px;
+
+        width: $text-size;
+        height: $text-size;
+    }
+
+    &__abbr_pink::before{
+        background: url('../icons/icon-list-element-pink.svg') center;
+    }
+    
+    &__abbr_green::before{
+        background: url('../icons/icon-list-element-green.svg') center;
+    }
+}
