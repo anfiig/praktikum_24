@@ -14,11 +14,6 @@
         width: 50px;
         height: 50px;
 
-        // @include small-phone{
-        //     width: 35px;
-        //     height: 35px;
-        // }
-
         @include tablet-portrait{
             width: 40px;
             height: 40px;
