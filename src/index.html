@@ -8,7 +8,10 @@
     <meta name="description" content="Portfolio von Andrei Filippov | Frontend">
     <meta name="keywords" content="portfolio, praktikum, frontend, web">
     <meta name="author" content="Filippov Andrei, anfiig">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
+
 
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
@@ -17,7 +20,7 @@
 </head>
 <body>
     <header class="header">
-        <aside class="contacts">
+        <aside class="contacts" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="00" data-aos-once="true">
             <a href="https://t.me/anfiig" class="contacts__link" target="_blank">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="#fff" xmlns="http://www.w3.org/2000/svg" class="contacts__icon">
                     <title>Telegram icon, link to contact</title>
@@ -34,75 +37,86 @@
             </a>
         </aside>
 
-        <h1 class="header__title">
+        <h1 class="header__title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
             Bewerbung fürs Praktikum
             <span class="header__name">Filippov Andrei</span>
         </h1>
 
-        <button class="header__button unselectable">
+        <a href="#about-me" class=" header__button unselectable">
             <img src="icons/icon-arrow.svg" alt="icon down arrow to the following sections" class="header__arrow">
-        </button>
+        </a>
     </header>
 
     <main class="main">
-        <section class="section about-me">
+        <section class="section section_sticky-wrapper about-me scroll-text-box" id="about-me">
             <h2 class="section-title about-me__title">About me</h2>
-            <div class="about-me__info">
-                <p class="about-me__text">
-                    Lorem ipsum dolor sit amet consectetur. Ut morbi adipiscing in sed sapien viverra. Fringilla aenean ornare lectus ultrices turpis tellus. Bibendum facilisi semper et tellus fermentum magna. Montes metus id in elementum ultrices commodo at auctor. Ut amet ac fames non blandit egestas a.
-                </p> 
-                <img src="img/photo-me.jpg" alt="photo: Andrei Filippov in the elevator" class="about-me__img">
-                <p class="about-me__text">
-                    Lorem ipsum dolor sit amet consectetur. Ut morbi adipiscing in sed sapien viverra. Fringilla aenean ornare lectus ultrices turpis tellus. Bibendum facilisi semper et tellus fermentum magna. Montes metus id in elementum ultrices commodo at auctor. Ut amet ac fames non blandit egestas a.
-                </p>
-                <span class="about-me__fixed-me about-me__fixed-me_static">Ich</span>
+            
+            <div class="sticky-wrapper">
+                <span class="sticky-wrapper__text about-me__fixed-me">Ich</span>
+                <div class="about-me__info">
+                    <p class="about-me__text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true">
+                        Mein Name ist Andrei. Ich bin ein engagierter Frontend-Entwickler mit großer Begeisterung für moderne Webtechnologien und benutzerzentriertes Design. Derzeit besuche ich das <a href="https://www.studienkolleg.uni-halle.de/" class="about-me__link" target="_blank">Studienkolleg Halle</a> und werde bald ein Studium der Wirtschaftsinformatik an der Universität beginnen. Schon jetzt verfüge ich über fundierte Kenntnisse in der Webentwicklung und strebe danach, diese weiter einzusetzen und zu vertiefen.
+                    </p>
+                    <div class="slider about-me__slider" id="slider" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
+                        <img src="img/photo-me-1.jpeg" alt="photo: Andrei Filippov" class="slide about-me__slide">
+                        <img src="img/photo-me-2.jpeg" alt="photo: Andrei Filippov" class="slide about-me__slide">
+                        <img src="img/photo-me-3.jpeg" alt="photo: Andrei Filippov" class="slide about-me__slide">
+                        <img src="img/photo-me-4.jpeg" alt="photo: Andrei Filippov" class="slide about-me__slide">
+
+                        <button class="slider-button slider-button_prev about-me__slider-button about-me__slider-button_prev"></button>
+                        <button class="slider-button slider-button_next about-me__slider-button about-me__slider-button_next"></button>
+                    </div>
+                    <p class="about-me__text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true">
+                        In Russland konnte ich durch zahlreiche Wettbewerbe meine Teamfähigkeit und mein Projektmanagement verbessern. Besonders prägend war mein zweimonatiges Praktikum bei <a href="https://www.adict.ru/" class="about-me__link" target="_blank">adict</a>, wo ich nicht nur technische Probleme löste, sondern auch wesentlich zum Teamerfolg beitrug. Ich suche eine Position, in der ich meine Fähigkeiten in einer dynamischen Umgebung wie der Ihren weiterentwickeln kann.
+                    </p>
+                </div>
             </div>
         </section>
-
+        
         <section class="section stack">
             <h2 class="section-title">Stack</h2>
             <div class="stack-grid">
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true">
                     <span class="stack-grid__title">HTML</span>
                     <img src="icons/tech-html.svg" alt="HTML" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
                     <span class="stack-grid__title">CSS</span>
                     <img src="icons/tech-css.svg" alt="CSS" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
                     <span class="stack-grid__title">JS</span>
                     <img src="icons/tech-js.svg" alt="JavaScript" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true">
                     <span class="stack-grid__title">PUG</span>
                     <img src="icons/tech-pug.svg" alt="PUG" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
                     <span class="stack-grid__title">BOOTSTRAP</span>
                     <img src="icons/tech-bootstrap.svg" alt="BOOTSTRAP" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
                     <span class="stack-grid__title">SCSS/SASS</span>
                     <img src="icons/tech-sass.svg" alt="SCSS and SASS" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
                     <span class="stack-grid__title">GIT/GITHUB</span>
                     <img src="icons/tech-github.svg" alt="GIT and GITHUB" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350" data-aos-once="true">
                     <span class="stack-grid__title">GULP</span>
                     <img src="icons/tech-gulp.svg" alt="GULP" class="stack-grid__icon">
                 </div>
 
-                <div class="stack-grid__el">
+                <div class="stack-grid__el" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
                     <span class="stack-grid__title"><a href="https://getbem.com/" class="stack-grid__link" target="_blank">BEM</a></span>
                 </div>
             </div>
@@ -111,28 +125,28 @@
         <section class="section works">
             <h2 class="section-title">Meine Werke</h2>
             <ul class="works__list">
-                <li class="works__el works__el_maket">
+                <li class="works__el works__el_maket" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/puls/" class="works__link" target="_blank">https://anfiig.github.io/sites/puls/</a>
                 </li>
-                <li class="works__el works__el_maket">
+                <li class="works__el works__el_maket" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/uber/" class="works__link" target="_blank">https://anfiig.github.io/sites/uber/</a>
                 </li>
-                <li class="works__el works__el_mine">
+                <li class="works__el works__el_mine" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/scheduler/" class="works__link" target="_blank">https://anfiig.github.io/sites/scheduler/</a>
                 </li>
-                <li class="works__el works__el_mine">
+                <li class="works__el works__el_mine" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/sputnik/" class="works__link" target="_blank">https://anfiig.github.io/sites/sputnik/</a>
                 </li>
-                <li class="works__el works__el_mine">
+                <li class="works__el works__el_mine" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
                     <a href="https://anfiig.github.io/internship" class="works__link" target="_blank">https://anfiig.github.io/internship</a>
                 </li>
-                <li class="works__el works__el_maket">
+                <li class="works__el works__el_maket" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/adict/" class="works__link" target="_blank">https://anfiig.github.io/sites/adict/</a>
                 </li>
-                <li class="works__el works__el_maket">
+                <li class="works__el works__el_maket" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
                     <a href="https://anfiig.github.io/sites/sclassic/" class="works__link" target="_blank">https://anfiig.github.io/sites/sclassic/</a>
                 </li>
-                <li class="works__el works__el_mine">
+                <li class="works__el works__el_mine" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350" data-aos-once="true">
                     <a href="https://anfiig.github.io/" class="works__link" target="_blank">https://anfiig.github.io/</a>
                 </li>
             </ul>
@@ -144,7 +158,7 @@
     </main>
 
     <footer class="footer">
-        <a href="mailto:anfiig.de@gmail.com" class="footer__mail">anfiig.de@gmail.com</a>
+        <a href="mailto:anfiig.de@gmail.com" class="footer__mail" >anfiig.de@gmail.com</a>
         
         <aside class="contacts contacts_footer">
             <a href="https://t.me/anfiig" class="contacts__link" target="_blank">
@@ -163,5 +177,8 @@
             </a>
         </aside>
     </footer>
+
+    <script type="module" src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

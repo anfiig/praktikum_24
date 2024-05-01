@@ -1,8 +1,4 @@
 .about-me{
-    &__title{
-        // margin: 0 0 150px 0;
-    }
-
     &__info{
         position: relative;
 
@@ -19,16 +15,29 @@
         letter-spacing: 1px;
     }
 
-    &__img{
+    &__link{
+        text-decoration: none;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 0.5px $white-85;
+    }
+
+
+    &__link:hover{
+        -webkit-text-stroke: 0.8px $main-white;
+    }
+
+    &__slider{
         width: 350px;
+        height: 350px;
         margin: 50px 0;
     }
 
-    &__fixed-me{
-        position: absolute;
-        top: calc(-1 * $title-size);
-        left: calc(-1 * (((100% - $section-width) / 4) + $title-size * 2));
+    &__slide{
+        width: 100%;
+    }
 
+    &__fixed-me{
         font-size: 64px;
         color: $main-pink;
     }

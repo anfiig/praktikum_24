@@ -1,0 +1,50 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity $transition-slow-time ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../icons/slider-btn.svg');
+    border: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    
+    &_prev{
+        left: 10px;
+        transform: rotate(90deg);
+    }
+    &_next{
+        right: 10px;
+        transform: rotate(-90deg);
+    }
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}

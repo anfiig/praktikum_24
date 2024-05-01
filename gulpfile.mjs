@@ -6,7 +6,6 @@ import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
 // import {deleteSync} from 'del';;
-// import image from 'gulp-image';
 
 const sass = gulpSass(sassCompiler);
 
@@ -32,15 +31,8 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
-// function imageCopy() {
-//     return gulp.src('src/img/*')
-//       .pipe(image())
-//       .pipe(gulp.dest('dist/img'));
-//   }
-
 gulp.task('transfer', function() {
     // clean();
-    // imageCopy();
     return gulp.src(['src/**/*', '!src/sass/', '!src/sass/**/*', '!src/img/**/*'])
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());

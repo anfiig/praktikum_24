@@ -8,22 +8,21 @@
     }
 
     &__link{
-        color: $main-white;
+        color: $white-40;
         font-size: $text-size;
         letter-spacing: 2px;
         text-decoration: none;
+        transition: color $transition-time;
     }
 
     &__el{
         position: relative;
         opacity: 0.4;
-        transition: opacity $transition-time;
         width: 100%;
     }
 
-    &__el:hover{
-        transition: opacity $transition-time;
-        opacity: 1;
+    &__el:hover &__link{
+        color: $main-white;
     }
 
     &__el:before{
@@ -34,6 +33,14 @@
 
         width: $text-size;
         height: $text-size;
+
+        opacity: 0.4;
+
+        transition: opacity $transition-time;
+    }
+
+    &__el:hover:before{
+        opacity: 1;
     }
 
     &__el_maket::before{

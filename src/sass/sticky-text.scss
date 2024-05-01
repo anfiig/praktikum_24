@@ -1,0 +1,11 @@
+.sticky-wrapper{
+    display: flex;
+    gap: 100px;
+
+    &__text{
+        position: sticky;
+        top: 80px;  
+        height: $title-size;
+        box-sizing: border-box;
+    }
+}
