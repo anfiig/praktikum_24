@@ -5,6 +5,10 @@
         display: flex;
         flex-direction: column;
         align-items: left;
+
+        @include mini-tablet-portrait{
+            align-items: center;
+        }
     }
 
     &__text{
@@ -13,13 +17,21 @@
         line-height: 1.25;
         text-align: justify;
         letter-spacing: 1px;
+
+        @include tablet-portrait{
+            font-size: 15px;
+        }
+
+        @include mini-tablet-portrait{
+            text-align: left;
+        }
     }
 
     &__link{
         text-decoration: none;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        -webkit-text-stroke: 0.5px $white-85;
+        -webkit-text-stroke: 0.5px $main-pink;
     }
 
 
@@ -31,6 +43,22 @@
         width: 350px;
         height: 350px;
         margin: 50px 0;
+
+        @include tablet-portrait{
+            width: 250px;
+            height: 250px;
+            margin: 25px 0;
+        }
+
+        @include mini-tablet-portrait{
+            width: 300px;
+            height: 300px;
+        }
+
+        @include medium-phone{
+            width: 250px;
+            height: 250px;
+        }
     }
 
     &__slide{
@@ -40,5 +68,17 @@
     &__fixed-me{
         font-size: 64px;
         color: $main-pink;
+
+        @include tablet{
+            font-size: 48px;
+        }
+
+        @include tablet-portrait{
+            font-size: 40px;
+        }
+
+        @include mini-tablet-portrait{
+            display: none;
+        }
     }
 }

@@ -13,6 +13,16 @@
 
         width: 50px;
         height: 50px;
+
+        // @include small-phone{
+        //     width: 35px;
+        //     height: 35px;
+        // }
+
+        @include tablet-portrait{
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__icon{
@@ -27,12 +37,21 @@
     &__icon:hover{
         transition: fill $transition-time;
         fill: $main-pink;
+
+        @include tablet{
+            fill: $main-white;
+        }
     }
 
     &__icon:active{
         transition: width $transition-time, height $transition-time;
         width: calc(50px*0.97);
         height: calc(50px*0.97);
+
+        @include tablet{
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__stroke-icon{
@@ -50,12 +69,20 @@
     &__stroke-icon:hover path{
         stroke: $main-pink;
         transition: stroke $transition-time;
+
+        @include tablet{
+            stroke: $main-white;
+        }
     }
 }
 
 .contacts{
     &__icon_footer:hover{
         fill: $main-green;
+
+        @include tablet{
+            fill: $main-white;
+        }
     }
 
     &__stroke-icon.contacts__icon_footer:hover {
@@ -65,6 +92,10 @@
     &__stroke-icon.contacts__icon_footer:hover path {
         stroke: $main-green;
         transition: stroke $transition-time;
+
+        @include tablet{
+            stroke: $main-white;
+        }
     }
 }
 

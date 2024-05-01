@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 
+    @include tablet-portrait{
+        gap: 10px;
+    }
+
     &__el{
         position: relative;
 
@@ -15,11 +19,34 @@
         background: $green-10;
         border: 3px solid $main-green;
         border-radius: 5px;
+
+        @include tablet{
+            width: 125px;
+            height: 125px;
+        }
+
+        @include tablet-portrait{
+            width: 100px;
+            height: 100px;
+        }
+
+        @include medium-phone{
+            width: 75px;
+            height: 75px;
+        }
     }
 
     &__title{
         font-size: $table-text-size;
         color: $main-white;
+
+        @include tablet-portrait{
+            font-size: 15px;
+        }
+
+        @include medium-phone{
+            font-size: 10px;
+        }
     }
 
     &__icon{
@@ -28,16 +55,36 @@
         left: 50%;
         transform: translateX(-50%);
         opacity: 0;
+
+        @include tablet{
+            width: 30px;
+            height: 30px;
+            bottom: 10px;
+        }
+
+        @include tablet-portrait{
+            width: 25px;
+            height: 25px;
+        }
+
+        @include medium-phone{
+            bottom: 5px;
+            z-index: -1;
+        }
     }
 
     &__el:hover{
-        transition: background $transition-time;
+        transition: background $transition-time !important;
         background: $green-20;
     }
 
     &__el:hover &__icon{
         transition: opacity $transition-slow-time;
         opacity: 1;
+
+        @include medium-phone{
+            opacity: 0.5;
+        }
     }
 
     &__link{

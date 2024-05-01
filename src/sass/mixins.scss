@@ -1,0 +1,38 @@
+//phones
+
+@mixin medium-phone {
+  @media (max-width: 340px) {
+    @content;
+  }
+}
+
+@mixin large-phone {
+  @media (max-width: 432px) {
+    @content;
+  }
+}
+
+//tablets
+@mixin mini-tablet-portrait {
+  @media (max-width: 558px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}

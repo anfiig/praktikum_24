@@ -2,6 +2,14 @@
     display: flex;
     gap: 100px;
 
+    @include small-tablet{
+        gap: 70px;
+    }
+
+    @include tablet-portrait{
+        gap: 40px;
+    }
+
     &__text{
         position: sticky;
         top: 80px;  

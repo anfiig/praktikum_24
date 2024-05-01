@@ -9,9 +9,8 @@
     height: calc(100vh - 30px*2);
     padding: 30px;
 
-    .contacts{
-        top: 30px;
-        right: 40px;
+    @include tablet-portrait{
+        height: 80vh;
     }
 
     &__title{
@@ -22,11 +21,41 @@
         align-items: center;
         font-size: $title-size;
         color: $main-pink;
+
+        @include small-tablet{
+            font-size: 48px;
+        }
+
+        @include tablet-portrait{
+            font-size: 40px;
+            align-items: start;
+        }
+
+        @include mini-tablet-portrait{
+            font-size: 30px;
+        }
+
+        @include large-phone{
+            font-size: 6vw;
+        }
+
     }
 
     &__name{
         margin: 10px 0 0 0;
         color: $main-white;
+
+        @include small-tablet{
+            margin: 15px 0 0 0;
+        }
+
+        @include mini-tablet-portrait{
+            font-size: 48px;
+        }
+
+        @include large-phone{
+            font-size: 10vw;
+        }
     }
 
     &__button{
@@ -37,7 +66,12 @@
         background: none;
         border: none;
 
-        cursor: pointer;    
+        cursor: pointer;
+
+        @include tablet-portrait{
+            visibility: hidden;
+            pointer-events: none;
+        }
     }
 
     &__button:hover{
